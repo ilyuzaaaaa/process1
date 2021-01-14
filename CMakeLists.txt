@@ -47,8 +47,8 @@ find_package(GTest CONFIG REQUIRED)
 add_executable(tests
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Builder.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Process.cpp
-        #${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
+        #${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         )
 target_include_directories(tests
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include

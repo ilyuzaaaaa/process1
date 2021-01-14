@@ -15,7 +15,7 @@ void Process::create(std::unique_ptr<ThreadData> &data) {
     }
 
     data->isTerminated = true;
-
+    std::cerr << "TIME IS OVER";
         data->currentProcess.terminate();
 }
 
@@ -44,6 +44,11 @@ void Process::startProcess(const std::list<std::string> &commandArg,
                 (ThreadData{false, std::move(child)});
     } else {
         data->currentProcess = std::move(child);
+    }
+    // Get output
+    for (std::string line;
+         data->currentProcess.running() && std::getline(stream, line);) {
+        std::cout << line << std::endl;
     }
 
     // Wait until exit
