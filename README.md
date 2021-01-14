@@ -84,6 +84,7 @@ $ cmake --build _builds
 
 6. Подключение библиотек [**Boost.Process**](https://docs.hunter.sh/en/latest/packages/pkg/BoostProcess.html) и [**Async++**](https://docs.hunter.sh/en/latest/packages/pkg/Async++.html) осуществить с использованием пакетного менеджера **Hunter**.
 
+
 ## Рекомендации
 
 1. Для обработки параметров командной строки использовать компонент `boost::program_options`.
