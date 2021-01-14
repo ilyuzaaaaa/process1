@@ -40,7 +40,8 @@ void Process::startProcess(const std::list<std::string> &commandArg,
 
     // Update data
     if (!data) {
-        data = std::make_unique<ThreadData>(ThreadData{false, std::move(child)});
+        data = std::make_unique<ThreadData>
+                (ThreadData{false, std::move(child)});
     } else {
         data->currentProcess = std::move(child);
     }

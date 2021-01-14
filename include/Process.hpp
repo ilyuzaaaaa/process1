@@ -14,8 +14,15 @@
 #include <string>
 
 #include "Builder.hpp"
-#include "Parameters.hpp"
-#include "ThreadData.hpp"
+#include <iostream>
+#include <random>
+
+struct ThreadData {
+    ThreadData() = delete;
+
+    bool isTerminated = false;
+    boost::process::child currentProcess;
+};
 
 class Process {
 public:

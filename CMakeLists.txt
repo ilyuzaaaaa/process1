@@ -45,7 +45,6 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
 add_executable(tests
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/Parameters.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Builder.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Process.cpp
         #${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
